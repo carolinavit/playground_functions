@@ -14,11 +14,8 @@ function splitSentence(param1) {
 }
 
 // Desafio 4
-function concatName(nomes) {
-  let nome1 = nomes[nomes.length - 1];
-  let nome2 = nomes[0];
-  let resultado = nome1 + ',' + nome2;
-  return resultado;
+function concatName(array) {
+  return array[array.length - 1] + ', ' + array[0];
 }
 
 // Desafio 5
@@ -27,10 +24,14 @@ function footballPoints() {
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
-}
+function highestCount(numeros) {
+  let indiceMaior = 0;
 
+  for (let index = 0; index < numeros.length; index += 1) {
+    indiceMaior = index;
+  }
+  return indiceMaior;
+}
 // Desafio 7
 function catAndMouse() {
   // seu código aqui
