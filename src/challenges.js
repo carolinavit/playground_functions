@@ -26,12 +26,20 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(numeros) {
-  let indiceMaior = 0;
+  let indiceMaior = numeros[0];
+  let vezesAparece = 0;
 
   for (let index = 0; index < numeros.length; index += 1) {
-    indiceMaior = index;
+    if (indiceMaior < numeros[index]) {
+      indiceMaior = numeros[index];
+    }
   }
-  return indiceMaior;
+  for (let index = 0; index < numeros.length; index += 1) {
+    if (numeros[index] === indiceMaior) {
+      vezesAparece += 1;
+    }
+  }
+  return vezesAparece;
 }
 // Desafio 7
 function catAndMouse() {
