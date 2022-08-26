@@ -60,11 +60,24 @@ function fizzBuzz() {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  let newString = string;
+  newString = newString.replaceAll('a', '1');
+  newString = newString.replaceAll('e', '2');
+  newString = newString.replaceAll('i', '3');
+  newString = newString.replaceAll('o', '4');
+  newString = newString.replaceAll('u', '5');
+  return newString;
 }
-function decode() {
-  // seu código aqui
+
+function decode(string) {
+  let newString = string;
+  newString = newString.replaceAll('1', 'a');
+  newString = newString.replaceAll('2', 'e');
+  newString = newString.replaceAll('3', 'i');
+  newString = newString.replaceAll('4', 'o');
+  newString = newString.replaceAll('5', 'u');
+  return newString;
 }
 
 // Desafio 10
