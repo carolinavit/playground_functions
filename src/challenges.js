@@ -44,8 +44,8 @@ function highestCount(numeros) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  distanciaCat1 = Math.abs(mouse - cat1);
-  distanciaCat2 = Math.abs(cat2 - mouse);
+  let distanciaCat1 = Math.abs(mouse - cat1);
+  let distanciaCat2 = Math.abs(cat2 - mouse);
   if (distanciaCat1 === distanciaCat2) {
     return 'os gatos trombam e o rato foge';
   }
@@ -81,10 +81,23 @@ function decode(string) {
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(tecnologias, nome) {
+  if (
+    tecnologias === undefined ||
+    tecnologias.length === 0 ||
+    nome === undefined
+  ) {
+    return 'Vazio!';
+  }
+  let arrayTech = [];
+  let tecnologiasOrdenadas = tecnologias.sort();
+  for (let index = 0; index < tecnologiasOrdenadas.length; index += 1) {
+    let objeto = { tech: tecnologiasOrdenadas[index], name: nome };
+    arrayTech.push(objeto);
+  }
+  return arrayTech;
 }
-
+console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Lucas'));
 module.exports = {
   calcArea,
   catAndMouse,
