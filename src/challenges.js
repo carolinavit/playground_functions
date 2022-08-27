@@ -98,6 +98,7 @@ function techList(tecnologias, nome) {
   return arrayTech;
 }
 console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Lucas'));
+
 module.exports = {
   calcArea,
   catAndMouse,
